@@ -1,0 +1,47 @@
+.edit-container {
+    background-color: #f5f9ff;
+    min-height: 100vh;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .edit-title {
+    font-size: 36px;
+    color: #0a2342;
+    margin-bottom: 20px;
+  }
+  
+  .edit-textarea {
+    width: 70%;
+    height: 300px;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+  }
+  
+  .edit-actions {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .save-btn, .cancel-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .save-btn {
+    background-color: #0a2342;
+    color: white;
+  }
+  
+  .cancel-btn {
+    background-color: #d9d9d9;
+  }
+  

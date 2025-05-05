@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9fbfc;
+  color: #1f2937;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hero 區（簡化、變小） */
+.hero {
+  background-color: #1e3a8a;
+  color: white;
+  width: 100%;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.hero-text {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* 區塊共用樣式 */
+.section {
+  width: 90%;
+  max-width: 800px;
+  padding: 2rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* 網址區 */
+.input-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.url-input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* 筆記區 */
+.note-input {
+  width: 100%;
+  height: 180px;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  resize: vertical;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+/* 按鈕群 */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #1d4ed8;
+}
+
+.btn.secondary {
+  background-color: #10b981;
+}
+
+.btn.secondary:hover {
+  background-color: #059669;
+}
+
+.btn.danger {
+  background-color: #ef4444;
+}
+
+.btn.danger:hover {
+  background-color: #dc2626;
+}
+
+/* 預覽區 */
+.preview-box {
+  background-color: #f1f5f9;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  min-height: 100px;
+  color: #374151;
+  line-height: 1.5;
+}
+
+/* 頁腳 */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #1e3a8a;
+  color: white;
+  font-size: 0.875rem;
+}

@@ -1,0 +1,71 @@
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.Register-container {
+    margin: 0 15px;
+}
+
+.Register-form-box {
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+}
+
+h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input{
+    width: 94%;
+    padding: 13px;
+    background: #eee;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+button{
+    width: 100%;
+    padding: 12px;
+    background: #7494ec;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight:500;
+    margin-bottom: 20px;
+    transition: 0.5s;
+}
+
+button:hover{
+    background: #6884d3;
+}
+
+p{
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+}
