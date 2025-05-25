@@ -122,6 +122,25 @@ export default function NotePage() {
     setSelectedNote(newNote.id);
   };
 
+  const handleCreateNoteWithTag = async (tag) => {
+    if (!userId) return;
+    const response = await fetch("http://localhost:8000/api/notes/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      credentials: "include",
+      body: JSON.stringify({
+        user: userId,
+        title: "新筆記",
+        content: "這是一筆新的內容",
+        tag_names: [tag]
+      })
+    });
+    if (!response.ok) return;
+    const newNote = await response.json();
+    setNotes(prev => ({ ...prev, [newNote.id]: newNote }));
+    setSelectedNote(newNote.id);
+  };
+
   const handleDeleteNote = async (id) => {
     const response = await fetch(`http://localhost:8000/api/notes/${id}/`, {
       method: "DELETE",
@@ -204,30 +223,17 @@ export default function NotePage() {
     <>
       <div className="sidebar-toggle">
         <Button
-  variant="ghost"
-  size="icon"
-  onClick={() => setSidebarOpen(!sidebarOpen)}
-  title={sidebarOpen ? '關閉側邊欄' : '顯示側邊欄'}
-  className="sidebar-toggle-icon"
->
-  <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2">
-    <rect x="4" y="4" width="12" height="12" rx="2" />
-    <line x1="8" y1="4" x2="8" y2="16" />
-  </svg>
-</Button>
-
-<Button
-  variant="ghost"
-  size="icon"
-  onClick={() => {
-    const html = document.documentElement;
-    html.classList.toggle('dark');
-    html.classList.toggle('light');
-  }}
-  title="切換黑色模式"
->
-  🌓
-</Button>
+          variant="ghost"
+          size="icon"
+          onClick={() => setSidebarOpen(!sidebarOpen)}
+          title={sidebarOpen ? '關閉側邊欄' : '顯示側邊欄'}
+          className="sidebar-toggle-icon"
+        >
+          <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2">
+            <rect x="4" y="4" width="12" height="12" rx="2" />
+            <line x1="8" y1="4" x2="8" y2="16" />
+          </svg>
+        </Button>
       </div>
 
       <div className="note-page-grid" style={{ gridTemplateColumns }}>
@@ -257,6 +263,7 @@ export default function NotePage() {
               onDeleteTag={handleDeleteTag}
               searchKeyword={searchKeyword}
               onSearchKeywordChange={setSearchKeyword}
+              handleCreateNoteWithTag={handleCreateNoteWithTag}
             />
           </div>
         )}
@@ -306,4 +313,3 @@ export default function NotePage() {
     </>
   );
 }
-
